@@ -20,6 +20,7 @@ import {
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthModule } from './components/auth/auth.module';
 import { BreadcrumbComponent } from './components/shared/breadcrumb/breadcrumb.component';
+import { UsersModule } from './components/users/users.module';
 
 const APP_COMPONENTS = [
   HeaderComponent,
@@ -38,7 +39,8 @@ const APP_COMPONENTS = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AuthModule
+    AuthModule,
+    UsersModule
   ],
   providers: [ScriptLoaderService],
   bootstrap: [AppComponent]

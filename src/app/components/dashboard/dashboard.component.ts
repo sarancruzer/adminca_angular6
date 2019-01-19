@@ -1,3 +1,4 @@
+import { ScriptLoaderService } from './../../_services/script-loader.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,11 +6,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit,AfterViewInit {
 
-  constructor() { }
+  constructor(private _script: ScriptLoaderService) { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    // this._script.load('./assets/js/scripts/dashboard_4.js');
   }
 
 }
